@@ -1,6 +1,6 @@
 # Nextify
 
-This is a re-write and re-construction of the [Stratify](stratify-app.com).
+This is a re-write and re-construction of the [Stratify](https://stratify-app.com)-app.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
