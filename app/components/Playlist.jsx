@@ -11,6 +11,7 @@
         if(selectedPlaylists.indexOf(id) !== -1){
             // Remove the selected
             setSelectedPlaylists(selectedPlaylists.filter(playlist => playlist !== id));
+            
         } else {
             // Add the selected
             setSelectedPlaylists([...selectedPlaylists, id]);

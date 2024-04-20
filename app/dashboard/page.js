@@ -41,7 +41,7 @@ export default function Dashboard() {
               <CleanButton isActive={selectedPlaylists.length === 1 ? true : false} />
             </div>
           </section>
-          <h2 className="mt-8">Playlists</h2>
+          <h2 className="mt-8 mx-0 px-0">Playlists</h2>
           <Playlists selectedPlaylists={selectedPlaylists} setSelectedPlaylists={setSelectedPlaylists}/>
         </section>
       </main>
