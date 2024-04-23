@@ -9,6 +9,7 @@ import CleanButton from "../components/CleanButton";
 
 export default function Dashboard() {
   const [selectedPlaylists, setSelectedPlaylists] = useState([]);
+  const [isMerging, setIsMerging] = useState(false);
 
   return (
     <>
@@ -24,7 +25,7 @@ export default function Dashboard() {
                 To merge playlists, select the playlists you want to merge. Then
                 click the merge-button below to select a target playlist.
               </p>
-              <MergeButton isActive={selectedPlaylists.length > 0 ? true : false} />
+              <MergeButton isActive={selectedPlaylists.length > 0 ? true : false}  selectedPlaylists={selectedPlaylists} isMerging={isMerging} setIsMerging={setIsMerging}/>
             </div>
             <div className="flex flex-col items-center justify-between shadow-lg bg-neutral-100 p-8">
               <h2>Delete</h2>
@@ -42,7 +43,7 @@ export default function Dashboard() {
             </div>
           </section>
           <h2 className="mt-8 mx-0 px-0">Playlists</h2>
-          <Playlists selectedPlaylists={selectedPlaylists} setSelectedPlaylists={setSelectedPlaylists}/>
+          <Playlists selectedPlaylists={selectedPlaylists} setSelectedPlaylists={setSelectedPlaylists} isMerging={isMerging}/>
         </section>
       </main>
     </>

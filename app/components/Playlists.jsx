@@ -4,7 +4,7 @@ import Playlist from "./Playlist";
 import DeselectAllButton from "./DeselectAllButton.jsx";
 
 
-export default function Playlists({ selectedPlaylists, setSelectedPlaylists }) {
+export default function Playlists({ selectedPlaylists, setSelectedPlaylists, isMerging }) {
 
     const [playlists, setPlaylists] = useState(null);
     const [displayedPlaylists, setDisplayedPlaylists] = useState(null);
@@ -16,7 +16,7 @@ export default function Playlists({ selectedPlaylists, setSelectedPlaylists }) {
     }
 
     function displayPlaylists() {
-            let showSelected = document.getElementById("showSelected");
+        let showSelected = document.getElementById("showSelected");
         let searchBox = document.getElementById("searchPlaylists");
 
         // Show selection without search 
@@ -89,7 +89,7 @@ export default function Playlists({ selectedPlaylists, setSelectedPlaylists }) {
                     <DeselectAllButton deselectAll={deselectAll} />
                 </div>
                 <section className="overflow-y-auto rounded-md bg-neutral-200 shadow-lg my-8 border-2 border-neutral-200">
-                    {displayedPlaylists.map(playlist => <Playlist key={playlist.id} id={playlist.id} src={playlist.images ? playlist.images[0].url : "https://placehold.co/400"} title={playlist.name} owner={playlist.owner.display_name} selectedPlaylists={selectedPlaylists} setSelectedPlaylists={setSelectedPlaylists} />)}
+                    {displayedPlaylists.map(playlist => <Playlist key={playlist.id} id={playlist.id} src={playlist.images ? playlist.images[0].url : "https://placehold.co/400"} title={playlist.name} owner={playlist.owner.display_name} selectedPlaylists={selectedPlaylists} setSelectedPlaylists={setSelectedPlaylists} isMerging={isMerging} />)}
                 </section>
             </>
 
